@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "composite": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*", "tests/**/*", "electron/**/*"],
+  "references": [
+    { "path": "../../packages/shared-types" },
+    { "path": "../../packages/config-schema" },
+    { "path": "../../packages/contracts" }
+  ]
+}

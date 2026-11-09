@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "clientVersion": "0.1.0-alpha",
+  "modules": {
+    "core_test_module": {
+      "enabled": false,
+      "keybind": 72,
+      "settings": {
+        "keybind": "72",
+        "enable_feature": "true",
+        "opacity": "80.0",
+        "accent_color": "#F59E0BFF",
+        "display_mode": "NORMAL",
+        "custom_text": "ZombekClient 2026",
+        "action_key": "71",
+        "visual_flags": "Ramka,Cień"
+      }
+    }
+  }
+}"mod1": {
+      "enabled": false,
+      "keybind": 71,
+      "settings": {
+        "keybind": "71"
+      }
+    },
+    "mod2": {
+      "enabled": false,
+      "keybind": 71,
+      "settings": {
+        "keybind": "71"
+      }
+    }
+  }
+}

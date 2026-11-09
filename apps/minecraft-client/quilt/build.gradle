@@ -1,0 +1,64 @@
+plugins {
+    id 'org.quiltmc.loom' version '1.6.9'
+    id 'maven-publish'
+    id 'java'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Quilt'
+        url = 'https://maven.quiltmc.org/repository/release'
+    }
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+}
+
+dependencies {
+    // Shared ZombekClient Core
+    implementation project(':core')
+
+    // Minecraft and mappings
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}"
+    modImplementation "org.quiltmc:quilt-loader:${project.quilt_loader_version}"
+
+    // Testing
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+jar {
+    dependsOn ':core:jar'
+    from { zipTree(project(':core').tasks.jar.archiveFile) }
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "minecraft_version", project.minecraft_version
+    inputs.property "quilt_loader_version", project.quilt_loader_version
+
+    filesMatching("quilt.mod.json") {
+        expand "version": project.version,
+                "minecraft_version": project.minecraft_version,
+                "quilt_loader_version": project.quilt_loader_version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release.set(17)
+    it.options.encoding = "UTF-8"
+}
+
+test {
+    useJUnitPlatform()
+}

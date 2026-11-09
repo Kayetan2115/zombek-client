@@ -1,0 +1,68 @@
+:root {
+  /* Color Palette — Christmas Minecraft & Ząbek */
+  --bg-app: #080b11;
+  --bg-sidebar: #0b0f19;
+  --bg-topbar: #0d121f;
+  --bg-content: #0e1422;
+  --bg-surface: #131a2c;
+  --bg-surface-hover: #19233a;
+  --bg-surface-active: #1f2b47;
+  --bg-card: #141c2e;
+  --bg-card-hover: #1b253d;
+  --bg-modal: #111726;
+  --bg-overlay: rgba(4, 7, 13, 0.85);
+
+  /* Festive Pine & Forest Green */
+  --pine-900: #081a12;
+  --pine-800: #0f2e20;
+  --pine-700: #14442f;
+  --pine-500: #10b981;
+  --pine-400: #34d399;
+  --pine-glow: rgba(16, 185, 129, 0.25);
+
+  /* Festive Crimson Red */
+  --crimson-900: #2b0b0d;
+  --crimson-800: #4a1317;
+  --crimson-600: #dc2626;
+  --crimson-500: #ef4444;
+  --crimson-400: #f87171;
+  --crimson-glow: rgba(239, 68, 68, 0.28);
+
+  /* Festive Gold & Star Amber */
+  --gold-900: #2d1f05;
+  --gold-700: #855306;
+  --gold-500: #f59e0b;
+  --gold-400: #fbbf24;
+  --gold-glow: rgba(245, 158, 11, 0.28);
+
+  /* Diamond / Frost Ice */
+  --frost-900: #082635;
+  --frost-600: #0284c7;
+  --frost-500: #0ea5e9;
+  --frost-400: #38bdf8;
+  --frost-glow: rgba(56, 189, 248, 0.24);
+
+  /* Neutral Snow & Slate */
+  --text-snow: #f8fafc;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-dim: #475569;
+
+  /* Borders & Dividers */
+  --border-subtle: #1e293b;
+  --border-light: #283750;
+  --border-accent: rgba(56, 189, 248, 0.35);
+
+  /* UI Dimensions */
+  --sidebar-width: 250px;
+  --topbar-height: 56px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}

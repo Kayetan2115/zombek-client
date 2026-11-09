@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "savedAtEpoch": 1794157029857,
+  "totalHistoricalPlaytimeSeconds": 0,
+  "sessions": [],
+  "stopwatchProfiles": {
+    "Speedrun": {
+      "state": "STOPPED",
+      "elapsedNanos": 0
+    },
+    "Building": {
+      "state": "STOPPED",
+      "elapsedNanos": 0
+    },
+    "Mining": {
+      "state": "STOPPED",
+      "elapsedNanos": 0
+    },
+    "Custom": {
+      "state": "STOPPED",
+      "elapsedNanos": 0
+    }
+  }
+}

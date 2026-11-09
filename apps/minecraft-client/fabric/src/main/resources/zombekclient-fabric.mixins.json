@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "package": "pl.zombek.client.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "InGameHudMixin",
+    "BossBarHudMixin",
+    "CameraMixin",
+    "ItemStackMixin",
+    "ItemEntityRendererMixin",
+    "HeldItemRendererMixin",
+    "PlayerListHudMixin",
+    "EntityRendererMixin",
+    "ChatHudMixin",
+    "GameRendererMixin",
+    "MouseMixin",
+    "ClientWorldMixin",
+    "LightmapTextureManagerMixin",
+    "BackgroundRendererMixin",
+    "ParticleManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

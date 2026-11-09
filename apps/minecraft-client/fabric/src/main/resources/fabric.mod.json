@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "zombekclient",
+  "version": "${version}",
+  "name": "ZombekClient Fabric",
+  "description": "ZombekClient in-game client module for Minecraft Java Edition.",
+  "authors": [
+    "ZombekClient Team"
+  ],
+  "contact": {
+    "homepage": "https://zombekclient.pl"
+  },
+  "license": "Proprietary",
+  "icon": "assets/zombekclient/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "pl.zombek.client.core.ZombekClientMod"
+    ]
+  },
+  "mixins": [
+    "zombekclient-fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=17"
+  }
+}

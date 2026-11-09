@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[49,)"
+license="MIT"
+issueTrackerURL="https://github.com/zombekclient/zombekclient/issues"
+
+[[mods]]
+modId="zombekclient"
+version="${mod_version}"
+displayName="${mod_name}"
+logoFile="assets/zombekclient/logo.png"
+authors="ZombekClient Team"
+description='''
+ZombekClient Mod dla Minecraft Forge. Nowoczesny klient PvP z wbudowanym systemem modułów i menu konfiguracyjnym pod RIGHT SHIFT.
+'''
+
+[[dependencies.zombekclient]]
+    modId="forge"
+    mandatory=true
+    versionRange="[49,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.zombekclient]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.4,1.20.5)"
+    ordering="NONE"
+    side="BOTH"

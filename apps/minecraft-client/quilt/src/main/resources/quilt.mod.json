@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "pl.zombek.client",
+    "id": "zombekclient",
+    "version": "${version}",
+    "metadata": {
+      "name": "ZombekClient",
+      "description": "Oficjalny mod ZombekClient dla Minecraft Quilt 1.20.4.",
+      "authors": [
+        "ZombekClient Team"
+      ],
+      "contact": {
+        "homepage": "https://zombekclient.pl"
+      },
+      "license": "Proprietary"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "pre_launch": [
+        "pl.zombek.client.quilt.entrypoint.QuiltClientBootstrap"
+      ],
+      "client": [
+        "pl.zombek.client.quilt.entrypoint.QuiltClientBootstrap"
+      ]
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": ">=${quilt_loader_version}"
+      },
+      {
+        "id": "minecraft",
+        "versions": "~${minecraft_version}"
+      },
+      {
+        "id": "java",
+        "versions": ">=17"
+      }
+    ]
+  },
+  "mixin": [
+    "zombekclient-quilt.mixins.json"
+  ],
+  "minecraft": {
+    "environment": "client"
+  }
+}

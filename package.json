@@ -1,0 +1,24 @@
+{
+  "name": "zombekclient-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ZombekClient - Custom Minecraft Java Edition Launcher & Mod Architecture",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @zombek/launcher dev",
+    "start": "pnpm --filter @zombek/launcher start",
+    "build": "pnpm --filter \"@zombek/*\" -r build",
+    "typecheck": "pnpm --filter \"@zombek/*\" -r typecheck",
+    "lint": "node ./scripts/lint.mjs",
+    "test": "vitest run",
+    "verify:structure": "node ./scripts/verify-structure.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

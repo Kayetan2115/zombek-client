@@ -1,0 +1,64 @@
+{
+  "$schema": "https://zombekclient.pl/schemas/client-releases.v1.json",
+  "name": "ZombekClient In-Game Client",
+  "description": "Oficjalne wydania modu klienta ZombekClient dla wspieranych loaderów",
+  "version": "0.1.0-alpha",
+  "releases": [
+    {
+      "modId": "zombekclient",
+      "clientVersion": "0.1.0-alpha",
+      "minecraftVersion": "1.20.4",
+      "loader": "fabric",
+      "loaderVersionRange": ">=0.15.0",
+      "filename": "zombekclient-fabric-0.1.0-alpha.jar",
+      "relativePath": "fabric/build/libs/zombekclient-fabric-0.1.0-alpha.jar",
+      "size": 1506115,
+      "sha256": "daaf415958c9ca4cfc0b89d697a8fd396ed88b8fe31012e9405783d76a9014fc",
+      "entrypoint": "pl.zombek.client.core.ZombekClientMod",
+      "metadataFormat": "fabric.mod.json",
+      "environment": "client"
+    },
+    {
+      "modId": "zombekclient",
+      "clientVersion": "0.1.0-alpha",
+      "minecraftVersion": "1.20.4",
+      "loader": "forge",
+      "loaderVersionRange": "[49.0,)",
+      "filename": "zombekclient-forge-0.1.0-alpha.jar",
+      "relativePath": "forge/build/libs/zombekclient-forge-0.1.0-alpha.jar",
+      "size": 1425972,
+      "sha256": "7c028b82a36ce9aa1cd774fa475716714e9b0ac581b4c0b649ab00cdba6704b9",
+      "entrypoint": "pl.zombek.client.forge.entrypoint.ZombekForgeMod",
+      "metadataFormat": "META-INF/mods.toml",
+      "environment": "client"
+    },
+    {
+      "modId": "zombekclient",
+      "clientVersion": "0.1.0-alpha",
+      "minecraftVersion": "1.20.4",
+      "loader": "neoforge",
+      "loaderVersionRange": "[20.4,)",
+      "filename": "zombekclient-neoforge-0.1.0-alpha.jar",
+      "relativePath": "neoforge/build/libs/zombekclient-neoforge-0.1.0-alpha.jar",
+      "size": 1422765,
+      "sha256": "03119d7aa6b76656c91467756c23bcbfa76b8aff681f441c7adc1cf20a83237d",
+      "entrypoint": "pl.zombek.client.neoforge.entrypoint.ZombekNeoForgeMod",
+      "metadataFormat": "META-INF/neoforge.mods.toml",
+      "environment": "client"
+    },
+    {
+      "modId": "zombekclient",
+      "clientVersion": "0.1.0-alpha",
+      "minecraftVersion": "1.20.4",
+      "loader": "quilt",
+      "loaderVersionRange": ">=0.25.0",
+      "filename": "zombekclient-quilt-0.1.0-alpha.jar",
+      "relativePath": "quilt/build/libs/zombekclient-quilt-0.1.0-alpha.jar",
+      "size": 1463169,
+      "sha256": "69db5672c24ac9f65b703b57fdd322d694413312e7b482f889e3ae47e633f475",
+      "entrypoint": "pl.zombek.client.quilt.entrypoint.QuiltClientBootstrap",
+      "metadataFormat": "quilt.mod.json",
+      "environment": "client"
+    }
+  ]
+}

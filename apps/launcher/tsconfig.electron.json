@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist-electron",
+    "rootDir": "./electron",
+    "noEmit": false
+  },
+  "include": ["electron/**/*"],
+  "references": [
+    { "path": "../../packages/shared-types" },
+    { "path": "../../packages/config-schema" },
+    { "path": "../../packages/contracts" }
+  ]
+}
