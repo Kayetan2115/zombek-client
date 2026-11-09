@@ -8,7 +8,8 @@ cd /d "%~dp0"
 git remote get-url origin >nul 2>&1
 if not errorlevel 1 (
     echo [GIT] Sprawdzanie i pobieranie najnowszych zmian z repozytorium...
-    git pull --quiet
+    git branch --set-upstream-to=origin/main main >nul 2>&1
+    git pull origin main --quiet >nul 2>&1
 )
 
 echo ======================================================================

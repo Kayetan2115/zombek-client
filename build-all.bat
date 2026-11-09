@@ -14,7 +14,23 @@ cd /d "%ROOT_DIR%"
 git remote get-url origin >nul 2>&1
 if not errorlevel 1 (
     echo [GIT] Sprawdzanie i pobieranie najnowszych zmian z repozytorium...
-    git pull --quiet
+    git branch --set-upstream-to=origin/main main >nul 2>&1
+    git pull origin main --quiet >nul 2>&1
+)
+
+:: Sprawdzenie Node.js i pnpm
+where pnpm >nul 2>&1
+if errorlevel 1 (
+    echo [INFO] Nie znaleziono pnpm w systemie. Proba automatycznej instalacji przez npm...
+    where npm >nul 2>&1
+    if not errorlevel 1 (
+        call npm install -g pnpm
+    ) else (
+        echo [BLAD] Brak Node.js i pnpm w PATH.
+        echo Pobierz i zainstaluj Node.js ze strony: https://nodejs.org/
+        pause
+        exit /b 1
+    )
 )
 
 :: 1. Build launcher and packages
