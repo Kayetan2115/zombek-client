@@ -4,6 +4,13 @@ setlocal
 title ZombekClient - Minecraft 1.20.4
 cd /d "%~dp0"
 
+:: Auto-pull updates from Git if remote configured
+git remote get-url origin >nul 2>&1
+if not errorlevel 1 (
+    echo [GIT] Sprawdzanie i pobieranie najnowszych zmian z repozytorium...
+    git pull --quiet
+)
+
 echo ======================================================================
 echo                  ZOMBEKCLIENT - MINECRAFT 1.20.4
 echo ======================================================================

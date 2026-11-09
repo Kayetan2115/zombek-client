@@ -9,6 +9,13 @@ echo.
 
 cd /d "%~dp0"
 
+:: 0. Auto-pull updates from Git if remote configured
+git remote get-url origin >nul 2>&1
+if not errorlevel 1 (
+    echo [GIT] Sprawdzanie i pobieranie najnowszych zmian z repozytorium...
+    git pull --quiet
+)
+
 :: 1. Check Node.js
 where node >nul 2>&1
 if errorlevel 1 (

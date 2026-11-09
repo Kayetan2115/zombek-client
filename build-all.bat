@@ -10,6 +10,13 @@ echo.
 set "ROOT_DIR=%~dp0"
 cd /d "%ROOT_DIR%"
 
+:: 0. Auto-pull updates from Git if remote configured
+git remote get-url origin >nul 2>&1
+if not errorlevel 1 (
+    echo [GIT] Sprawdzanie i pobieranie najnowszych zmian z repozytorium...
+    git pull --quiet
+)
+
 :: 1. Build launcher and packages
 echo [1/6] Budowanie pakietow TypeScript i Launchera...
 call pnpm run build
